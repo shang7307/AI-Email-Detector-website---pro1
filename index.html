@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Shield | AI Email Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+        <div class="blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <h1>NEXUS<span>SHIELD</span></h1>
+            </div>
+            <p class="subtitle">AI-Driven Neural Threat Intelligence</p>
+        </header>
+
+        <section class="scanner-section" id="scannerSection">
+            <div class="input-wrapper glass-panel shimmer">
+                <div class="panel-header">
+                    <span class="panel-label">INPUT ANALYZER</span>
+                    <span class="status-indicator">READY</span>
+                </div>
+                <textarea id="emailInput" placeholder="Paste the email content here for neural analysis..."></textarea>
+                <div class="scan-controls">
+                    <button id="scanBtn" class="primary-btn">
+                        <span class="btn-text">INITIALIZE SCAN</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="loading-section hidden" id="loadingSection">
+            <div class="scanner-beam-container">
+                <div class="scanner-beam"></div>
+                <div class="scanner-grid"></div>
+            </div>
+            <div class="loading-status-group">
+                <p class="loading-text">DECODING NEURAL PATTERNS...</p>
+                <div class="loading-subtext">Scanning metadata, links, and syntax vectors</div>
+            </div>
+        </section>
+
+        <section class="results-section hidden" id="resultsSection" data-stagger="true">
+            <div class="results-grid">
+                <div class="score-panel glass-panel">
+                    <div class="panel-header"><span class="panel-label">THREAT ASSESSMENT</span></div>
+                    <div class="circular-progress" id="scoreRing">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="bg" cx="50" cy="50" r="40"></circle>
+                            <circle class="progress" cx="50" cy="50" r="40" id="progressCircle"></circle>
+                        </svg>
+                        <div class="score-value">
+                            <span id="scoreText">0</span>%
+                        </div>
+                    </div>
+                    <div class="status-badge" id="statusBadge">
+                        <span class="badge-icon" id="badgeIcon"></span>
+                        <span id="badgeText">SAFE</span>
+                    </div>
+                </div>
+
+                <div class="details-panel glass-panel">
+                    <div class="panel-header"><span class="panel-label">AI REPORT</span></div>
+                    <p id="aiExplanation" class="ai-explanation"></p>
+                    
+                    <div class="detected-items">
+                        <h3>THREAT VECTORS:</h3>
+                        <ul id="flagsList"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlighted-email glass-panel">
+                <div class="panel-header">
+                    <span class="panel-label">CONTENT ANALYTICS</span>
+                    <button id="copyBtn" class="icon-btn" title="Copy results">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    </button>
+                </div>
+                <div id="highlightedContent" class="content-box"></div>
+            </div>
+
+            <div class="action-bar">
+                 <button id="resetBtn" class="secondary-btn">NEW ANALYSIS</button>
+            </div>
+        </section>
+    </main>
+
+    <audio id="scanCompleteSound" src="data:audio/mp3;base64,//NExAAAAANIAAAAAExBTUUzLjEwMKqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
