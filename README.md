@@ -16,9 +16,8 @@ I’ve built a web application that helps users identify whether an email is **f
 🌐 **Live Project:**
 https://shang7307.github.io/AI-Email-Detector-website---pro1/
 
-💻 **GitHub Repository:**
-(Add your GitHub link here)
+
 
 I would love your feedback and suggestions 🙌
 
-#AI #WebDevelopment #MachineLearning #StudentProject #BTech #LinkedInLearning
+#AI #WebDevelopment #MachineLearning #StudentProject #B E , B tech # Nxt wave
